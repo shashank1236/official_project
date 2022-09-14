@@ -3,7 +3,7 @@
     <head>
         <title>Landing Page</title>
     </head>
-    <body class="antialiased" id="top">
+    <body id="top">
         @include('include.header')
 
         <main>
@@ -12,7 +12,7 @@
             </section>
         </main>
 
-        <a href=""></a>
+        <a href="#top"><i class="fa fa-angle-up"></i></a>
 
         @include('include.footer')
     </body>
