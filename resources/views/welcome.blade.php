@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <title>Landing Page</title>
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
     </head>
     <body id="top">
         @include('include.header')
