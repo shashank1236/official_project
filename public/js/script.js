@@ -1,3 +1,20 @@
+var myScrollFunc = function () {
+    var y = window.scrollY;
+    if (y >= 200) {
+        // $("#top-nav").slideDown();
+        $("#top-nav").attr("style","visibility: hidden;");
+        $("#slide-nav").slideDown("fast");
+        $("#slide-nav").html($("#top-nav").html());
+        $("#scroll-to-top").fadeIn(500);
+    } else {
+        $("#top-nav").attr("style","visibility: visible");
+        $("#scroll-to-top").fadeOut(500);
+        $("#slide-nav").slideUp("fast");
+    }
+};
+
+window.addEventListener("scroll", myScrollFunc);
+
 // Slider
 (function($) {
   "use strict";

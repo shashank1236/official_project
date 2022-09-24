@@ -269,7 +269,7 @@
             </section>
         </main>
 
-        <a href="#top" class="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+        <a id="scroll-to-top" href="#top" class="scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
         <script type="text/javascript" src="{{ asset('js/mo.js') }}"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

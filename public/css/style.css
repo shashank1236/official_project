@@ -138,6 +138,86 @@
 
 .gp-topnav-second .nav-link {
 	color: rgba(0,0,0,.7);
+	position: relative;
+	margin-left: 10px;
+}
+
+.gp-topnav-second .nav-link:hover {
+	color: rgb(64 121 198);
+	/* margin-left: 10px; */
+}
+
+.gp-topnav-second .nav-link::after {
+	content: '';
+	position: absolute;
+	bottom: 3px;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: rgb(64 121 198);
+	transform: scaleX(0);
+	transform-origin: 100%;
+	transition: transform 0.3s;
+}
+
+.gp-topnav-second .gp-topnav-link:hover .nav-link::after {
+   transform: scaleX(1);
+   transform-origin: 0;
+}
+
+.gp-dropdown {
+	position: relative;
+	/* opacity: 1; */
+	display: inline-block;
+	/* transition: all 500ms ease; */
+}
+
+.dropdown-content {
+  /* display: none; */
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  box-shadow: none;
+  height: 0;
+  z-index: 103;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+}
+
+.dropdown-content a {
+  color: #4a4a4b;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition-duration: 0.5s;
+}
+
+.dropdown-content a:hover {
+	background-color: #0c4fa9;
+	color: white;
+	/* transition-duration: 0.5s; */
+	transition: all 0.5s ease;
+}
+
+.gp-dropdown:hover .dropdown-content {
+	/* display: block; */
+	opacity: 1;
+	background: #f1f1f1;
+	box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+	height: fit-content;
+}
+
+.gp-topnav-link:hover .nav-link {
+    color: rgb(64 121 198);
+}
+
+.slide-nav {
+	display: none;
+	position: fixed;
+	z-index: 103;
+	width: 100%;
+	top: 0;
+	box-shadow: 0px 3px 21px 0 #555050;
 }
 
 @media (min-width: 960px) and (max-width: 1100px) {
