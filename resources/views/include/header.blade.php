@@ -3,9 +3,8 @@
 </head>
 
 <!-- Header -->
-<header>
-    <!-- 
- -->    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <header>
+    <nav class="navbar navbar-light bg-light"  style="background-color: #e3f2fd;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
             	<div class="gp-logo-div">
@@ -17,39 +16,67 @@
 	    			</div>
             	</div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
             <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+        </div>
+    </nav>
+</header> -->
+<header>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid gp-container-fluid">
+            <a class="navbar-brand" href="#">
+                <div class="gp-logo-div">
+                    <div class="gp-logo">
+                        <img class="gp-logo-img" src="{{ asset('images/logo.png') }}" alt="">
+                    </div>
+                    <div class="gp-logo-text">
+                        <div>Gyan Bharti</div> <div>public school</div>
+                    </div>
+                </div>
+            </a>
+            <div class="gp-inner-nav">
+                <div class="gp-inner-nav-top d-flex">
+                    <div class="nav-link" aria-current="page" href="#">
+                        <div class="d-flex">
+                            <div class="link-icon"><i class="fa-solid fa-phone"></i></div> 
+                            PHONE NUMBER <br>
+                            +91 9877844744
+                        </div>
+                    </div>
+                    <div class="nav-link" aria-current="page" href="#">
+                        <div class="d-flex">
+                            <div class="link-icon"><i class="fa-solid fa-envelope"></i></div>
+                            E-MAIL ADDRESS <br>
+                            gyanpublicschool@gmail.com
+                        </div>
+                    </div>
+                    <div class="nav-link" aria-current="page" href="#">
+                        <div class="d-flex">
+                            <div class="link-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            LOCATION <br>
+                            Bargon Rd, Badgon, Gorakhpur, Uttar Pradesh 273010
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gp-topnav-second">
+                    <div class="d-flex">
+                        <div>
+                            <a class="nav-link" href="#">Link 1</a>
+                        </div>
+                        <div>
+                            <a class="nav-link" href="#">Link 2</a>
+                        </div>
+                        <div>
+                            <a class="nav-link" href="#">Link 3</a>
+                        </div>
+                        <div>
+                            <a class="nav-link" href="#">Link 4</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- <span class="navbar-toggler-icon"></span> -->
         </div>
     </nav>
 </header>
