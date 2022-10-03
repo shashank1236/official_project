@@ -49,9 +49,9 @@
                         <div class="gp-topnav-link gp-dropdown">
                             <a class="nav-link" href="#">Link 2</a>
                             <div class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
+                                <a class="gp-dd-link" href="#">Link 1</a>
+                                <a class="gp-dd-link" href="#">Link 2</a>
+                                <a class="gp-dd-link" href="#">Link 3</a>
                             </div>
                         </div>
 
@@ -76,7 +76,7 @@
                         </div>
 
                         <div class="gp-topnav-link">
-                            <a class="nav-link" href="#">Link 4</a>
+                            <a class="nav-link" href="{{ url('contact') }}">Contact Us</a>
                         </div>
                     </div>
                 </div>

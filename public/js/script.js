@@ -1,11 +1,21 @@
+// Top Nav
+var onhoverin = function () {
+  $(this).parent().prev().css({
+    color: "rgba(0,0,0,.7)"
+  });
+};
+var onhoverout = function () {
+  $(this).parent().prev().attr("style", "")
+};
+$(".gp-dd-link").hover(onhoverin, onhoverout)
 var myScrollFunc = function () {
     var y = window.scrollY;
     if (y >= 200) {
-        // $("#top-nav").slideDown();
         $("#top-nav").attr("style","visibility: hidden;");
         $("#slide-nav").slideDown("fast");
         $("#slide-nav").html($("#top-nav").html());
         $("#scroll-to-top").fadeIn(500);
+        $(".gp-dd-link").hover(onhoverin, onhoverout)
     } else {
         $("#top-nav").attr("style","visibility: visible");
         $("#scroll-to-top").fadeOut(500);
@@ -149,3 +159,7 @@ $(document).ready(function() {
 }); 
 
 
+// Scroll To Top
+$("#scroll-to-top").click(() => {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+})
