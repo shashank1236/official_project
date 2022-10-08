@@ -46,15 +46,6 @@
                             <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </div>
 
-                        <div class="gp-topnav-link gp-dropdown">
-                            <a class="nav-link" href="#">Link 2</a>
-                            <div class="dropdown-content">
-                                <a class="gp-dd-link" href="#">Link 1</a>
-                                <a class="gp-dd-link" href="#">Link 2</a>
-                                <a class="gp-dd-link" href="#">Link 3</a>
-                            </div>
-                        </div>
-
                         <div class="gp-topnav-link">
                             <a class="nav-link" href="#">Link 3</a>
                         </div>
@@ -71,8 +62,12 @@
                             <a class="nav-link" href="#">Link 2</a>
                         </div>
 
-                        <div class="gp-topnav-link">
-                            <a class="nav-link" href="#">Link 3</a>
+                        <div class="gp-topnav-link gp-dropdown">
+                            <a class="nav-link" href="#">About Us</a>
+                            <div class="dropdown-content">
+                                <a class="gp-dd-link" href="#">About School</a>
+                                <a class="gp-dd-link" href="#">Quotes</a>
+                            </div>
                         </div>
 
                         <div class="gp-topnav-link">
