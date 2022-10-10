@@ -20,3 +20,12 @@ Route::get('/', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+// Admin
+Route::get('/admin/login', function () {
+    return view('admin.admin_login');
+});
+
+Route::get('/admin/dashboard', function () {
+    return view('admin.admin_dashboard');
+});
