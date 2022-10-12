@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,9 +23,11 @@ Route::get('/contact', function () {
 });
 
 // Admin
-Route::get('/admin/login', function () {
+Route::get('/admin', function () {
     return view('admin.admin_login');
 });
+
+Route::post('/admin/login', [AdminController::class, 'adminLogin'], ["data", "shashank"]);
 
 Route::get('/admin/dashboard', function () {
     return view('admin.admin_dashboard');
