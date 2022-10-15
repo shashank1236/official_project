@@ -15,7 +15,7 @@
         </div>
     	<form class="needs-validation m-3" method="post" id="admin_login_form" novalidate>
     		<h5 class="text-center" style="color: #033967">Welcome, Plese login...</h5>
-    		<div class="invalid-feedback"> Please enter username or email </div>
+    		<div class="invalid-feedback text-center" id="invalidDetails"> Invalid details </div>
 	        <div class="mb-3">
 	            <label for="username_email">Username / Email</label>
 	            <input type="text" class="form-control" id="username_email" placeholder="Username / Email" required>
@@ -58,7 +58,16 @@
 						    	password: $("#password").val()
 						    },
 						    success: function(data) {
-						    	console.log(data);
+						    	if(data == 200) {
+						    		window.location.href = "{{ route('adminDashboard') }}"
+						    	} else {
+						    		$("#username_email").add("#password").val("")
+						    		$("#invalidDetails").show()
+						    		setTimeout(()=> {
+										$(".card").effect("shake");
+									}, 100);
+									form.classList.add('was-validated');
+						    	}
 						    }
 						})
 						// alert("submitted")

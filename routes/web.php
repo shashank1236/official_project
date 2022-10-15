@@ -23,12 +23,12 @@ Route::get('/contact', function () {
 });
 
 // Admin
-Route::get('/admin', function () {
-    return view('admin.admin_login');
-});
 
-Route::post('/admin/login', [AdminController::class, 'adminLogin'], ["data", "shashank"]);
+Route::group(['prefix' => 'admin'], function () {
+	Route::get('/', [AdminController::class, 'adminView']);
+	Route::post('/login', [AdminController::class, 'adminLogin']);
 
-Route::get('/admin/dashboard', function () {
-    return view('admin.admin_dashboard');
+	Route::group(['middleware' => 'adminauth'], function () {
+		Route::get('/dashboard', [AdminController::class, 'adminDashboardView'])->name('adminDashboard');
+	});
 });
