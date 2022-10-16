@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-    <head> @include("admin.include.admin_header") <title>Falcon | Dashboard &amp; Web App Template</title>
+    <head> 
+    	@include("admin.include.admin_header") 
+    	<title>Dashboard</title>
     </head>
     <body>
         <div class="row g-3 mb-3">

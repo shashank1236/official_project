@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageSettingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,5 +31,8 @@ Route::group(['prefix' => 'admin'], function () {
 
 	Route::group(['middleware' => 'adminauth'], function () {
 		Route::get('/dashboard', [AdminController::class, 'adminDashboardView'])->name('adminDashboard');
+		Route::group(['prefix' => 'page_settings'], function () {
+			Route::get('/landing_page/slider', [PageSettingController::class, 'landingSlider'])->name('landingSlider');
+		});
 	});
 });

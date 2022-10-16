@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
-    public function adminView() {
+    public function landingSlider() {
         return view('admin.admin_login');
     }
 

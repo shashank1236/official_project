@@ -40,7 +40,7 @@
                             <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
                                 <li class="nav-item">
                                     <!-- parent pages-->
-                                    <a class="nav-link dropdown-indicator" href="#dashboard" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dashboard">
+                                    <a class="nav-link dropdown-indicator" href="#dashboard" role="button" data-bs-toggle="collapse" aria-expanded="{!! Route::current()->getName() == 'adminDashboard'? true : false !!}" aria-controls="dashboard">
                                         <div class="d-flex align-items-center">
                                             <span class="nav-link-icon">
                                                 <span class="fas fa-chart-pie"></span>
@@ -48,9 +48,9 @@
                                             <span class="nav-link-text ps-1">Dashboard</span>
                                         </div>
                                     </a>
-                                    <ul class="nav collapse show" id="dashboard">
+                                    <ul class="nav collapse {!! Route::current()->getName() == 'adminDashboard'? 'show' : '' !!}" id="dashboard">
                                         <li class="nav-item">
-                                            <a class="nav-link active" href="index.html" aria-expanded="false">
+                                            <a class="nav-link {!! Route::current()->getName() == 'adminDashboard'? 'active' : '' !!}" href="{{ route('adminDashboard') }}" aria-expanded="false">
                                                 <div class="d-flex align-items-center">
                                                     <span class="nav-link-text ps-1">Default</span>
                                                 </div>
@@ -1842,34 +1842,25 @@
                                 <li class="nav-item">
                                     <!-- label-->
                                     <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
-                                        <div class="col-auto navbar-vertical-label">Documentation </div>
+                                        <div class="col-auto navbar-vertical-label">Pages Settings </div>
                                         <div class="col ps-0">
                                             <hr class="mb-0 navbar-vertical-divider" />
                                         </div>
                                     </div>
                                     <!-- parent pages-->
-                                    <a class="nav-link" href="documentation/getting-started.html" role="button" aria-expanded="false">
-                                        <div class="d-flex align-items-center">
-                                            <span class="nav-link-icon">
-                                                <span class="fas fa-rocket"></span>
-                                            </span>
-                                            <span class="nav-link-text ps-1">Getting started</span>
-                                        </div>
-                                    </a>
-                                    <!-- parent pages-->
-                                    <a class="nav-link dropdown-indicator" href="#customization" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="customization">
+                                    <a class="nav-link dropdown-indicator" href="#customization" role="button" data-bs-toggle="collapse" aria-controls="customization" aria-expanded="{!! Route::current()->getName() == 'landingSlider'? true : false !!}">
                                         <div class="d-flex align-items-center">
                                             <span class="nav-link-icon">
                                                 <span class="fas fa-wrench"></span>
                                             </span>
-                                            <span class="nav-link-text ps-1">Customization</span>
+                                            <span class="nav-link-text ps-1">Landing Page</span>
                                         </div>
                                     </a>
-                                    <ul class="nav collapse false" id="customization">
+                                    <ul class="nav collapse false {!! Route::current()->getName() == 'landingSlider'? 'show' : '' !!}" id="customization">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="documentation/customization/configuration.html" aria-expanded="false">
+                                            <a class="nav-link {!! Route::current()->getName() == 'landingSlider'? 'active' : '' !!}" href="{{ route('landingSlider') }}" aria-expanded="false">
                                                 <div class="d-flex align-items-center">
-                                                    <span class="nav-link-text ps-1">Configuration</span>
+                                                    <span class="nav-link-text ps-1">Slider</span>
                                                 </div>
                                             </a>
                                             <!-- more inner pages-->
@@ -1877,7 +1868,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="documentation/customization/styling.html" aria-expanded="false">
                                                 <div class="d-flex align-items-center">
-                                                    <span class="nav-link-text ps-1">Styling</span>
+                                                    <span class="nav-link-text ps-1">Gallery</span>
                                                 </div>
                                             </a>
                                             <!-- more inner pages-->
@@ -1885,8 +1876,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="documentation/customization/dark-mode.html" aria-expanded="false">
                                                 <div class="d-flex align-items-center">
-                                                    <span class="nav-link-text ps-1">Dark mode</span>
-                                                    <span class="badge rounded-pill ms-2 badge-soft-success">New</span>
+                                                    <span class="nav-link-text ps-1">Review</span>
                                                 </div>
                                             </a>
                                             <!-- more inner pages-->
@@ -1894,7 +1884,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="documentation/customization/plugin.html" aria-expanded="false">
                                                 <div class="d-flex align-items-center">
-                                                    <span class="nav-link-text ps-1">Plugin</span>
+                                                    <span class="nav-link-text ps-1">Map Location</span>
                                                 </div>
                                             </a>
                                             <!-- more inner pages-->
