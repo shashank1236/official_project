@@ -27,7 +27,7 @@
 	            <div class="invalid-feedback"> Please enter password </div>
 	        </div>
 		    <div class="text-center mb-1">
-		    	<button class="btn btn-primary" type="submit">Submit form</button>
+		    	<button class="btn btn-primary" type="submit">Login Form</button>
 		    </div>
 		</form>
     </div>
