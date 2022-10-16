@@ -12,5 +12,4 @@ class Admin extends Authenticatable
 {
 	protected $guard = 'admin';
     protected $table = "admin";
-    // protected $primaryKey = “isbn_no”;
 }
