@@ -10,6 +10,5 @@ class PageSettingController extends Controller
     public function landingSlider() {
         return view('admin.landingSlider');
     }
-//     Hello
 
 }
